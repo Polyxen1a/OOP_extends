@@ -1,7 +1,5 @@
 package transport;
 
-import java.sql.SQLOutput;
-
 import static transport.ValidateUtils.validateString;
 
 public class Bus extends Transport {
