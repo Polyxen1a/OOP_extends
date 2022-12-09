@@ -21,28 +21,38 @@ public class Car extends Transport {
                double enginePower,
                Integer maxSpeed,
                String refillType) {
-
-
-    }
         super(brand, model, year, country, color, maxSpeed);
 
-    this.bodyType =
+        this.bodyType = validateCarParameters(bodyType);
+        this.isSummerRubber = isSummerRubber;
+        this.transmission = validateTransmission(transmission);
+        this.number = validateCarNumber(number);
+        this.seatCount = validateSeatCount(seatCount);
+        this.enginePower = validateEngine(enginePower);
+    }
 
-    validateCarParameters(bodyType);
-    this.isSummerRubber =isSummerRubber;
-    this.transmission = validateTransmission(transmission);
-    this.number = validateCarNumber(number);
-    this.seatCount = validateSeatCount(seatCount);
-    this.enginePower = validateEngine(enginePower);
+    private double validateEngine(double enginePower) {
+
+        return enginePower;
+    }
+    private int validateSeatCount(int seatCount){
+
+        return seatCount;
+    }
+            private String validateCarNumber (String number){
+                return number;
+            }
 
     public String getBodyType() {
-        return bodyType;
-    }
-    public boolean isSummerRubber() {
-        return isSummerRubber;
+            return bodyType;
+        }
+        public boolean isSummerRubber () {
+            return isSummerRubber;
 
+        }
+
+    @Override
+    void refill(String fuel) {
+        
+    }
 }
-    }
-
-
-

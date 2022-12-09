@@ -1,5 +1,6 @@
 package transport;
 
+import static java.awt.Color.getColor;
 import static transport.ValidateUtils.*;
 
 public class Train extends Transport {
@@ -34,9 +35,10 @@ public class Train extends Transport {
 
     public static String validateRefillType(String value) {
         if (validateString(value) && value.equals("diesel")) {
-        return value;
-    } else {
-        return "diesel";
+            return value;
+        } else {
+            return "diesel";
+        }
     }
 
     public Integer getTravelTime() {
@@ -71,6 +73,7 @@ public class Train extends Transport {
         this.wagonsCount = wagonsCount;
     }
 
+
     @Override
     public String toString() {
         return "Train{" +
@@ -84,7 +87,15 @@ public class Train extends Transport {
                 ", country= " + getCountry() +
                 ", color= " + getColor() +
                 ", maxSpeed= " + getMaxSpeed();
-        };
+    }
+
+    private String getColor() {
+        return null;
+    }
+
+    private String getMaxSpeed() {
+        return null;
     }
 }
+
 
